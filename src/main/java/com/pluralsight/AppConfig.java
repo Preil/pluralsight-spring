@@ -14,14 +14,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean
+    @Bean (name = "customerService")
     public CustomerService getCustomerService(){
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         customerService.setCustomerRepository(getCustomerRepository());
         return customerService;
     }
 
-    @Bean
+    @Bean (name = "customerRepository")
     public CustomerRepository getCustomerRepository(){
         return new HibernateCustomerRepositoryImpl();
     }
