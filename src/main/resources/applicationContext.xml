@@ -11,5 +11,7 @@
 
     <context:component-scan base-package="com.pluralsight"/>
 
+    <context:property-placeholder location="app.properties"/>
+
 
 </beans>
